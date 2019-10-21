@@ -6,3 +6,9 @@ def index(request):
         'django_variable':"I am a Django Variable injected"
     }
     return render(request,'app/index.html',context=temp_dict)
+
+def content(request):
+    temp_dict={
+        'content':"Hello I am a Django Content"
+    }
+    return render(request,'app/main.html',context=temp_dict)
