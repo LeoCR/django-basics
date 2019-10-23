@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django_app.models import Topic,Webpage,AccessRecord
 # Create your views here.
 def index(request):
-    temp_dict={
-        'django_variable':"I am a Django Variable injected"
+    webpages_list = AccessRecord.objects.order_by('date')
+    date_dict = {
+        'access_records':webpages_list
     }
-    return render(request,'app/index.html',context=temp_dict)
+    return render(request,'app/index.html',context=date_dict)
 
 def content(request):
     temp_dict={

@@ -4,3 +4,6 @@ img{
 h1{
     color:darkgreen;
 }
+.django-template-views table,th,td{
+    border: 2px solid black;
+}
