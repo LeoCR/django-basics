@@ -8,31 +8,36 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
     <link rel="icon" type="image/png"  href="{% static 'img/django-logo.png' %}"/>
     <link rel="shortcut icon" href="{% static 'django-logo.ico' %}" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
     <title>Django App</title>
 </head>
 <body>
-    <h1>Hello this is Django</h1>
-    <img src="{% static 'img/icon-image.jpg' %}"/>
-    <h2>Here are your access records</h2>
-    <div class="django-template-views">
-        {% if access_records %}
-            <table>
-                <thead>
-                    <th>Site Name</th>
-                    <th>Date Access</th>
-                </thead>
-                <tbody>
-                    {% for acc in access_records %}
-                        <tr>
-                            <td>{{ acc.name }}</td>
-                            <td>{{ acc.date }}</td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        {% else %}
-            <p>No Access Records Found</p>
-        {% endif %}
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Hello this is Django</h1>
+            <img src="{% static 'img/icon-image.jpg' %}"/>
+            <h2>Here are your access records</h2>
+            <div class="django-template-views">
+                {% if access_records %}
+                    <table>
+                        <thead>
+                            <th>Site Name</th>
+                            <th>Date Access</th>
+                        </thead>
+                        <tbody>
+                            {% for acc in access_records %}
+                                <tr>
+                                    <td>{{ acc.name }}</td>
+                                    <td>{{ acc.date }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p>No Access Records Found</p>
+                {% endif %}
+            </div>
+        </div>
     </div>
 </body>
 </html>
