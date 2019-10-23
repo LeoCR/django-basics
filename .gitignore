@@ -62,3 +62,4 @@ typings/
 .DS_Store
 
 __pycache__
+django_project/__pycache__/
