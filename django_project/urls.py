@@ -21,7 +21,7 @@ from django_app import views
 
 urlpatterns = [
     path('formpage/', views.form_name_view,name='form_name'),
-    path('hello/', views.index,name='index'),
+    path('', views.index,name='index'), 
     path('app-content/', views.content,name='django_content'),
     path('app/',include('django_app.urls')),
     path('admin/', admin.site.urls),

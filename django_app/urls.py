@@ -1,6 +1,6 @@
-from django.conf.urls import url
 from django_app import views
-
+from django.urls import path
 urlpatterns=[
-    url(r'^$',views.index,name='index'),
+    path('',views.index,name='home'),
+    path('users/',views.users,name='users'),
 ]
