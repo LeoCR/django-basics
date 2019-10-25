@@ -7,6 +7,8 @@ from django_app.forms import NewUserForm
 def index(request):
     webpages_list = AccessRecord.objects.order_by('date')
     date_dict = {
+        'title':'Welcome to Django',
+        'number':2,
         'access_records':webpages_list
     }
     return render(request,'app/index.html',context=date_dict)

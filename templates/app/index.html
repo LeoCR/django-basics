@@ -3,7 +3,9 @@
 {% load staticfiles  %}
     {% block body_block %}
         <div class="jumbotron">
-            <h1>Welcome to Django</h1>
+            <h1>{{ title|upper}}</h1>
+            <h1>{{ title|cut:"Welcome"}}</h1>
+            <p>{{number|add:"4"}}</p>
             <img src="{% static 'img/icon-image.jpg' %}"/>
             <h2>Here are your access records</h2>
             <div class="django-template-views">
